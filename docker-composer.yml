@@ -1,0 +1,11 @@
+services:
+  js-knockout-id:
+    image: usuario001/docker-base-react:latest
+    container_name: js-ko
+    working_dir: /home/jp/app
+    volumes:
+      - .:/home/jp/app
+    ports:
+      - "80:80"
+    stdin_open: true
+    tty: true

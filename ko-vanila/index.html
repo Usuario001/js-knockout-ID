@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prueba de Knockout.js - Input de Texto</title>
+  <!-- Cargar Knockout.js desde CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Prueba de Input de Texto con Knockout.js</h1>
+    <div class="field">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" data-bind="textInput: nombre">
+    </div>
+    <p>Valor actual: <span data-bind="text: nombre"></span></p>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
