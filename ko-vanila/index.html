@@ -15,7 +15,35 @@
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" data-bind="textInput: nombre">
     </div>
-    <p>Valor actual: <span data-bind="text: nombre"></span></p>
+
+    <div class="field">
+        <label for="valueUpdate">con value update:</label>
+        <input type="text" id="valueUpdate" data-bind="valueUpdate: 'input', value: nombreDos">
+    </div>
+
+    <div class="field">
+        <label for="edad">Númerico:</label>
+        <input type="number" id="numerico" data-bind="textInput: numerico">
+    </div>
+
+    <div class="field">
+        <label for="numeroDos">Númerico:</label>
+        <input type="number" id="numeroDos" data-bind="
+            valueUpdate: 'keydown', 
+            value: numeroDos, 
+            event: { 
+                keydown: updateItemQty
+            }">
+    </div>
+
+
+    <div class="values">
+        <p>Valor actual del input tipo texto: <span data-bind="text: nombre"></span></p>
+        <p>Valor actual del input tipo texto con value update: <span data-bind="text: nombreDos"></span></p>
+        <p>Valor actual del input tipo número: <span data-bind="text: numerico"></span></p>
+        <p>Valor actual del input tipo número con value update: <span data-bind="text: numeroDos"></span></p>
+    </div>
+
   </div>
   
   <script src="main.js"></script>
